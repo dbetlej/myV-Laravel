@@ -4,9 +4,12 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use App\Models\Valentine;
 
 class ValentineFactory extends Factory
 {
+    protected $model = Valentine::class;
+
     /**
      * Define the model's default state.
      *
