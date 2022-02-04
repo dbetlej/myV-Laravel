@@ -15,7 +15,7 @@ class CreateMailLogsTable extends Migration
     {
         Schema::create('mail_logs', function (Blueprint $table) {
             $table->id();
-            $table->string('email', 80);
+            $table->string('email', 80)->nullable();
             $table->string('cupid_name', 50);
             $table->ipAddress('cupid');
             $table->string('valentine_token', 100);
