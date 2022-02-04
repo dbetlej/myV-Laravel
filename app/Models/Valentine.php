@@ -10,4 +10,25 @@ class Valentine extends Model
     use HasFactory;
 
     protected $table = 'mail_logs';
+    protected $attributes = [
+        'email' => false,
+        'cupid_name' => false,
+        'cupid' => false,
+        'valentine_token' => false,
+        'lover' => null,
+        'created_at' => null,
+        'updated_at' => null
+    ];
+
+     /**
+     * Scope a query to only include valentine token.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  string  $token
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeValentine($query, $token)
+    {
+        return $query->where('valentine_token', $token);
+    }
 }
