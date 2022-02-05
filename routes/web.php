@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ValentineController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/valentine', [ValentineController::class, 'makeValentine']);
+Route::get('/valentine/{token}', [ValentineController::class, 'getValentine']);

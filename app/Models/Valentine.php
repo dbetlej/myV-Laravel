@@ -31,4 +31,16 @@ class Valentine extends Model
     {
         return $query->where('valentine_token', $token);
     }
+
+     /**
+     * Scope a query to only include valentine cupid_name.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  string  $cupid_name
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeCupidName($query, $cupid_name)
+    {
+        return $query->where('cupid_name', $cupid_name);
+    }
 }
