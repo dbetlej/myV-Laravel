@@ -7,7 +7,7 @@ use App\Models\Valentine;
 
 class ValentineController extends Controller
 {
-    public function makeValentine(Request $request)[
+    public function makeValentine(Request $request){
         if(empty($request->cupid_name)){
             return back()->withErrors(['cupid_name', __('errors.cupid_name')])
         }
@@ -18,6 +18,7 @@ class ValentineController extends Controller
 
         $data['cupid_name'] = $request->cupid_name;
         $data['valentine_token'] = Str::random(20);
+        $data['cupid'] = $_SERVER['REMOTE_ADDR'];
         
         Valentine::factory()->create($data);
 
@@ -26,5 +27,22 @@ class ValentineController extends Controller
         }
         
         return view('valentine_confirmation', $data);
-    ];
+    };
+
+    public function getValentine(string $token){
+        if(empty($token)){
+            return redirect('/404');
+        }
+        
+        $v = Valentine::Valentine($token)->first();
+        if(empty($v->created_at)){
+            return redirect('/404');
+        }
+        
+        $v->lover = $_SERVER['REMOTE_ADDR'];
+        $v->created_at = date('Y-m-d H:i:s');
+        $v->save();
+
+        return view('valentine', ['valentine' => $v]);
+    };
 }
