@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>MY Valentine</title>
+        <title>Make Your Valentine</title>
     </head>
     <body>
-        <a href="/valentine/{{$valentine_token}}">/valentine/{{$valentine_token}}</a>
+        Dostałeś walentynkę od {{$valentine->cupid_name}}
     </body>
 </html>
