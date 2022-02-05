@@ -21,6 +21,9 @@ Route::get('/', function () {
 });
 Route::post('/valentine', [ValentineController::class, 'makeValentine']);
 Route::get('/valentine/{token}', [ValentineController::class, 'getValentine']);
+Route::get('/valentine/', function(){
+    return redirect('/404');
+});
 Route::get('/404', function(){
     return view('404');
 });

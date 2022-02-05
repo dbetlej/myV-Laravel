@@ -11,7 +11,7 @@ class ValentineController extends Controller
 {
     public function makeValentine(Request $request){
         if(empty($request->cupid_name)){
-            return back()->withErrors(['cupid_name', __('errors.cupid_name')]);
+            return back()->withErrors(['cupid_name' => __('errors.cupid_name')]);
         }
 
         $data['email'] = null;
@@ -20,7 +20,7 @@ class ValentineController extends Controller
 
         $data['cupid_name'] = $request->cupid_name;
         $data['valentine_token'] = Str::random(20);
-        $data['cupid'] = $_SERVER['REMOTE_ADDR'];
+        $data['cupid'] =  $request->ip();
         
         Valentine::factory()->create($data);
 
@@ -41,7 +41,7 @@ class ValentineController extends Controller
             return redirect('/404');
         }
         
-        $v->lover = $_SERVER['REMOTE_ADDR'];
+        $v->lover = $_SERVER['HTTP_FORWARDED_FOR'];
         $v->created_at = date('Y-m-d H:i:s');
         $v->save();
 

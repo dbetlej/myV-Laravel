@@ -10,6 +10,7 @@ use App\Models\Valentine;
 
 class ValentineTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic feature test user making valentine.
      *
@@ -28,8 +29,6 @@ class ValentineTest extends TestCase
         $response = $this->post('/valentine', [
             'cupid_name' => "ValentineTest"
         ]);
-        $response->assertRedirect('/confirmation');
-
         $v = Valentine::CupidName('ValentineTest')->first();
         $response->assertSeeText($v->valentine_token);
     }
@@ -39,8 +38,14 @@ class ValentineTest extends TestCase
      *
      * @return void
      */
-    public function test_user_geting_valentine()
+    public function test_user_getting_valentine()
     {
+        $response = $this->get('/valentine/');
+        $response->assertRedirect('/404');
+        
+        $response = $this->get('/valentine/test');
+        $response->assertRedirect('/404');
+
         $v = Valentine::factory()->create();
         $response = $this->get('/valentine/'.$v->valentine_token);
         $response->assertSeeText($v->cupid_name);
