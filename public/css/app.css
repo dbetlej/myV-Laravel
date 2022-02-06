@@ -763,17 +763,19 @@ body > .text > a{
   text-align: center;
   color: #510101;
 }
-
+.v-input.invalid{
+  border-color: #ff0000;
+  -webkit-animation: pulse 2s ease-in-out infinite;
+          animation: pulse 2s ease-in-out infinite;
+}
 .v-input::-moz-placeholder{
   color: #5c001a;
   text-align: center;
 }
-
 .v-input:-ms-input-placeholder{
   color: #5c001a;
   text-align: center;
 }
-
 .v-input::placeholder{
   color: #5c001a;
   text-align: center;
@@ -1054,7 +1056,7 @@ body > .text > a{
       box-shadow: 0 0 0 0 #d5003c;
   }
   100%{
-      box-shadow: 0 0 5px 30px #d5003c00;
+      box-shadow: 0 0 5px 20px #d5003c73;
   }
 }
 @keyframes pulse {
@@ -1062,7 +1064,7 @@ body > .text > a{
       box-shadow: 0 0 0 0 #d5003c;
   }
   100%{
-      box-shadow: 0 0 5px 30px #d5003c00;
+      box-shadow: 0 0 5px 20px #d5003c73;
   }
 }
 

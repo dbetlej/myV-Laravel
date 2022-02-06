@@ -12,13 +12,23 @@
             <form class="heart-form text-center" id="valentine-form" action="/valentine" method="POST">
                 @csrf
                 <div class="form-group flex flex-col items-center">
+                    @error('cupid_name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                    @error('email')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
                     <div class="form-input flex flex-row justify-around w-full mb-4">
                         <input placeholder="{{__('valentine.lover_email')}}" name="email" type="email" class="w-1/3 v-input @error('email') invalid @enderror">
                         <input placeholder="{{__('valentine.valentine_cupid_name')}}" name="cupid_name" type="text" class="w-1/3 v-input @error('cupid_name') invalid @enderror" >
                     </div>
                     <textarea class="valentine-content v-input w-3/4 mt-4" placeholder="{{__('valentine.valentine_content')}}"></textarea>
-                    <span id="valentine-link"></span>
+                    @if( !empty($v['valentine_token']) )
+                        <span id="valentine-link"> <a href="/valentine/{{ $v['valentine_token'] }}">Valentine link</a> - /valentine/{{ $v['valentine_token'] }}</span>
+                    @endif
                 </div>
+
                 <button type="button" class="send-valentine-btn mt-4 text-center">
                     <span class="send-valentine absolute top-1/2 left-1/2">
                         {{__('valentine.send_valentine')}}
@@ -27,11 +37,8 @@
                         {{__('valentine.sended_valentine')}}
                     </span>
                 </button>
-            </form>
 
-            @error('cupid_name')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
+            </form>
         </div>
 
 

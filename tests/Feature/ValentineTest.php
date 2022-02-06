@@ -30,7 +30,7 @@ class ValentineTest extends TestCase
             'cupid_name' => "ValentineTest"
         ]);
         $v = Valentine::CupidName('ValentineTest')->first();
-        $response->assertSeeText($v->valentine_token);
+        $response->assertSee($v->valentine_token);
     }
 
     /**

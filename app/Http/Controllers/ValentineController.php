@@ -28,7 +28,7 @@ class ValentineController extends Controller
             // TODO: add mail
         }
         
-        return view('valentine_confirmation', $data);
+        return view('welcome', ['v' => $data]);
     }
 
     public function getValentine(string $token){
@@ -41,7 +41,7 @@ class ValentineController extends Controller
             return redirect('/404');
         }
         
-        $v->lover = $_SERVER['REMOTE_ADDR'];
+        $v->lover = $_SERVER['REMOTE_ADDR']; //$_SERVER['HTTP_FORWARDED_FOR']; temporary for tests
         $v->created_at = date('Y-m-d H:i:s');
         $v->save();
 

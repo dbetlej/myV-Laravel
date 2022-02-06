@@ -20,6 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::post('/valentine', [ValentineController::class, 'makeValentine']);
+Route::get('/valentine', function(){
+    return redirect('/');
+});
 Route::get('/valentine/{token}', [ValentineController::class, 'getValentine']);
 Route::get('/valentine/', function(){
     return redirect('/404');

@@ -2121,6 +2121,7 @@ $('.heart').click(function () {
 });
 $('.send-valentine-btn').click(function () {
   $(this).addClass('animation');
+  $('#valentine-form').delay(4000).submit();
 });
 
 /***/ }),
