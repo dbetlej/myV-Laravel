@@ -27,3 +27,6 @@ Route::get('/valentine/', function(){
 Route::get('/404', function(){
     return view('404');
 });
+Route::get('/{xd}', function(){
+    return redirect('/404');
+});
