@@ -41,7 +41,7 @@ class ValentineController extends Controller
             return redirect('/404');
         }
         
-        $v->lover = $_SERVER['HTTP_FORWARDED_FOR'];
+        $v->lover = $_SERVER['REMOTE_ADDR'];
         $v->created_at = date('Y-m-d H:i:s');
         $v->save();
 

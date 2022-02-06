@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/css/404.css" rel="stylesheet">
-        <title>Make Your Valentine</title>
+        <title>404 - myV</title>
     </head>
     <body>
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" id="canvas">
