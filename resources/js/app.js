@@ -53,3 +53,7 @@ $('.heart').click(function(){
     $(this).parent().fadeOut();
     $('.heart-form').fadeIn();
 });
+
+$('.send-valentine-btn').click(function(){
+    $(this).addClass('animation');
+});

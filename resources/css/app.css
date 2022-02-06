@@ -72,6 +72,7 @@ body{
     left: 50%;
     top:50%;
     transform: translate(-50%, -50%);
+    /* animation: pulse 2s linear infinite; */
 }
 
 @media(max-width:450px){
@@ -172,5 +173,153 @@ body{
   }
   100% {
     transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+}
+
+.send-valentine-btn {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #eb3f84;
+  margin: 200px auto;
+  transform: rotate(0deg);
+  border-radius: 200px;
+}
+.send-valentine{
+  transform: translate(-50%, -50%);
+  rotate: 0deg;
+  z-index: 10;
+  transition: display 1s ease-in-out;
+}
+.animation > .send-valentine{
+  transition: display 1s ease-in-out;
+  display:none;
+}
+.animation.send-valentine-btn{
+   -webkit-animation: heart 4s ease 1;
+           animation: heart 4s ease 1;
+           animation-fill-mode: forwards;
+}
+.send-valentine-btn:before, .send-valentine-btn:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background: #eb3f84;
+  border-radius: 200px;
+  transition: 1s ease all;
+}
+.send-valentine-btn:before {
+  left: 0;
+  top: 0;
+  background: #eb3f84;
+}
+.animation.send-valentine-btn:before{
+  -webkit-animation: left 4s ease 1;
+          animation: left 4s ease 1;
+          animation-fill-mode: forwards;
+}
+.send-valentine-btn:after {
+  left: 0;
+  top: 0;
+  background: #eb3f84;
+}
+.animation.send-valentine-btn:after {
+  -webkit-animation: right 4s ease 1;
+          animation: right 4s ease 1;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes heart {
+  0% {
+    transform: rotate(0deg);
+    border-radius: 200px;
+    background: #fff;
+  }
+  50% {
+    transform: rotate(45deg);
+    border-radius: 10px;
+  }
+  100% {
+    transform: rotate(45deg);
+    border-radius: 10px;
+    background: #eb3f84;
+  }
+}
+
+@keyframes heart {
+  0% {
+    transform: rotate(0deg);
+    border-radius: 200px;
+    background: #fff;
+  }
+  50% {
+    transform: rotate(45deg);
+    border-radius: 10px;
+  }
+  100% {
+    transform: rotate(45deg);
+    border-radius: 10px;
+    background: #eb3f84;
+  }
+}
+@-webkit-keyframes left {
+  0% {
+    top: 0;
+    background: #fff;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: -100px;
+    background: #eb3f84;
+  }
+}
+@keyframes left {
+  0% {
+    top: 0;
+    background: #fff;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: -100px;
+    background: #eb3f84;
+  }
+}
+@-webkit-keyframes right {
+  0% {
+    left: 0;
+    background: #fff;
+  }
+  50% {
+    left: -100px;
+  }
+  100% {
+    left: -100px;
+    background: #eb3f84;
+  }
+}
+@keyframes right {
+  0% {
+    left: 0;
+    background: #fff;
+  }
+  50% {
+    left: -100px;
+  }
+  100% {
+    left: -100px;
+    background: #eb3f84;
+  }
+}
+@keyframes pulse {
+  0%{
+      box-shadow: 0 0 0 0 #d5003c;
+  }
+  100%{
+      box-shadow: 0 0 5px 30px #d5003c00;
   }
 }

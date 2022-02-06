@@ -16,7 +16,11 @@
                         <input placeholder="your name" name="cupid_name" type="text" class="w-1/3 v-input @error('cupid_name') invalid @enderror" >
                     </div>
                 </div>
-                <input type="submit" value="make valentine" class="v-input mt-4">
+                <button type="button" class="send-valentine-btn mt-4 text-center">
+                    <span class="send-valentine absolute top-1/2 left-1/2">
+                        {{__('valentine.send_valentine')}}
+                    </span>
+                </button>
             </form>
 
             @error('cupid_name')
@@ -48,6 +52,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="/js/404.js"></script>
+        <script src="/js/app.js"></script>
     </body>
 </html>
