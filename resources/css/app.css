@@ -110,7 +110,9 @@ body{
   color: #5c001a;
   text-align: center;
 }
-
+.valentine-content{
+  height: 130px;
+}
 .card-container{
   transform: translate(-50%, -50%);
 }
@@ -176,7 +178,7 @@ body{
   }
 }
 
-.send-valentine-btn {
+/* .send-valentine-btn {
   position: relative;
   width: 150px;
   height: 150px;
@@ -184,6 +186,17 @@ body{
   margin: 200px auto;
   transform: rotate(0deg);
   border-radius: 150px;
+} */
+.send-valentine-btn {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #eb3f84;
+  transform: rotate(0deg);
+  border-radius: 150px;
+  bottom: -32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .send-valentine, .send-valentine-after{
   transform: translate(-50%, -50%);
@@ -239,21 +252,29 @@ body{
           animation: right 4s ease 1;
           animation-fill-mode: forwards;
 }
-
+.logo {
+  top: 10%;
+}
 @-webkit-keyframes heart {
   0% {
     transform: rotate(0deg);
     border-radius: 150px;
     background: #fff;
+    bottom: -10%;
+    left: 39%;
   }
   50% {
     transform: rotate(45deg);
     border-radius: 10px;
+    bottom: -10%;
+    left: 39%;
   }
   100% {
     transform: rotate(45deg);
     border-radius: 10px;
     background: #eb3f84;
+    bottom: -10%;
+    left: 39%;
   }
 }
 
@@ -262,15 +283,21 @@ body{
     transform: rotate(0deg);
     border-radius: 150px;
     background: #fff;
+    bottom: -10%;
+    left: 39%;
   }
   50% {
     transform: rotate(45deg);
     border-radius: 10px;
+    bottom: -10%;
+    left: 39%;
   }
   100% {
     transform: rotate(45deg);
     border-radius: 10px;
     background: #eb3f84;
+    bottom: -10%;
+    left: 39%;
   }
 }
 @-webkit-keyframes left {

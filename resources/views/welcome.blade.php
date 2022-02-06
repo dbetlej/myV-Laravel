@@ -8,13 +8,16 @@
     </head>
     <body>
         <div class="valentine-container"> 
-            <form class="heart-form text-center" action="/valentine" method="POST">
+            <span class="text logo"><a href="/">MY Valentine</a></span>
+            <form class="heart-form text-center" id="valentine-form" action="/valentine" method="POST">
                 @csrf
-                <div class="form-group">
-                    <div class="form-input flex flex-row justify-around">
-                        <input placeholder="your valentine e-mail" name="email" type="email" class="w-1/3 v-input @error('email') invalid @enderror">
-                        <input placeholder="your name" name="cupid_name" type="text" class="w-1/3 v-input @error('cupid_name') invalid @enderror" >
+                <div class="form-group flex flex-col items-center">
+                    <div class="form-input flex flex-row justify-around w-full mb-4">
+                        <input placeholder="{{__('valentine.lover_email')}}" name="email" type="email" class="w-1/3 v-input @error('email') invalid @enderror">
+                        <input placeholder="{{__('valentine.valentine_cupid_name')}}" name="cupid_name" type="text" class="w-1/3 v-input @error('cupid_name') invalid @enderror" >
                     </div>
+                    <textarea class="valentine-content v-input w-3/4 mt-4" placeholder="{{__('valentine.valentine_content')}}"></textarea>
+                    <span id="valentine-link"></span>
                 </div>
                 <button type="button" class="send-valentine-btn mt-4 text-center">
                     <span class="send-valentine absolute top-1/2 left-1/2">
