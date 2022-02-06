@@ -178,22 +178,32 @@ body{
 
 .send-valentine-btn {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background: #eb3f84;
   margin: 200px auto;
   transform: rotate(0deg);
-  border-radius: 200px;
+  border-radius: 150px;
 }
-.send-valentine{
+.send-valentine, .send-valentine-after{
   transform: translate(-50%, -50%);
   rotate: 0deg;
   z-index: 10;
-  transition: display 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.send-valentine-after{
+  transform: none;
+  rotate: -45deg;
+  top: 57px !important;
+  display: none;
 }
 .animation > .send-valentine{
-  transition: display 1s ease-in-out;
+  transition: all 1s ease-in-out;
   display:none;
+}
+.animation > .send-valentine-after{
+  transition: all 1s ease-in-out;
+  display:block;
 }
 .animation.send-valentine-btn{
    -webkit-animation: heart 4s ease 1;
@@ -202,11 +212,11 @@ body{
 }
 .send-valentine-btn:before, .send-valentine-btn:after {
   content: "";
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   position: absolute;
   background: #eb3f84;
-  border-radius: 200px;
+  border-radius: 150px;
   transition: 1s ease all;
 }
 .send-valentine-btn:before {
@@ -233,7 +243,7 @@ body{
 @-webkit-keyframes heart {
   0% {
     transform: rotate(0deg);
-    border-radius: 200px;
+    border-radius: 150px;
     background: #fff;
   }
   50% {
@@ -250,7 +260,7 @@ body{
 @keyframes heart {
   0% {
     transform: rotate(0deg);
-    border-radius: 200px;
+    border-radius: 150px;
     background: #fff;
   }
   50% {
@@ -274,6 +284,7 @@ body{
   100% {
     top: -100px;
     background: #eb3f84;
+    border-bottom-right-radius: 0;
   }
 }
 @keyframes left {
@@ -287,6 +298,7 @@ body{
   100% {
     top: -100px;
     background: #eb3f84;
+    border-bottom-right-radius: 0;
   }
 }
 @-webkit-keyframes right {
@@ -300,6 +312,7 @@ body{
   100% {
     left: -100px;
     background: #eb3f84;
+    border-bottom-right-radius: 0;
   }
 }
 @keyframes right {
@@ -313,6 +326,7 @@ body{
   100% {
     left: -100px;
     background: #eb3f84;
+    border-bottom-right-radius: 0;
   }
 }
 @keyframes pulse {

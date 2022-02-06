@@ -20,6 +20,9 @@
                     <span class="send-valentine absolute top-1/2 left-1/2">
                         {{__('valentine.send_valentine')}}
                     </span>
+                    <span class="send-valentine-after absolute">
+                        {{__('valentine.sended_valentine')}}
+                    </span>
                 </button>
             </form>
 

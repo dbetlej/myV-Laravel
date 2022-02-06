@@ -425,39 +425,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 640px) {
-
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
-  }
-}
 .fixed {
   position: fixed;
 }
@@ -467,21 +434,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 .relative {
   position: relative;
 }
-.top-0 {
-  top: 0px;
-}
-.right-0 {
-  right: 0px;
-}
 .top-1\/2 {
   top: 50%;
 }
 .left-1\/2 {
   left: 50%;
 }
+.top-0 {
+  top: 0px;
+}
+.right-0 {
+  right: 0px;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.mt-4 {
+  margin-top: 1rem;
 }
 .ml-1 {
   margin-left: 0.25rem;
@@ -494,9 +464,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .ml-2 {
   margin-left: 0.5rem;
-}
-.mt-4 {
-  margin-top: 1rem;
 }
 .ml-4 {
   margin-left: 1rem;
@@ -531,6 +498,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .min-h-screen {
   min-height: 100vh;
 }
+.w-1\/3 {
+  width: 33.333333%;
+}
 .w-5 {
   width: 1.25rem;
 }
@@ -540,14 +510,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-auto {
   width: auto;
 }
-.w-1\/3 {
-  width: 33.333333%;
+.max-w-xl {
+  max-width: 36rem;
 }
 .max-w-6xl {
   max-width: 72rem;
-}
-.max-w-xl {
-  max-width: 36rem;
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -602,13 +569,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -676,9 +643,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 body{
@@ -887,22 +851,32 @@ body{
 
 .send-valentine-btn {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background: #eb3f84;
   margin: 200px auto;
   transform: rotate(0deg);
-  border-radius: 200px;
+  border-radius: 150px;
 }
-.send-valentine{
+.send-valentine, .send-valentine-after{
   transform: translate(-50%, -50%);
   rotate: 0deg;
   z-index: 10;
-  transition: display 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.send-valentine-after{
+  transform: none;
+  rotate: -45deg;
+  top: 57px !important;
+  display: none;
 }
 .animation > .send-valentine{
-  transition: display 1s ease-in-out;
+  transition: all 1s ease-in-out;
   display:none;
+}
+.animation > .send-valentine-after{
+  transition: all 1s ease-in-out;
+  display:block;
 }
 .animation.send-valentine-btn{
    -webkit-animation: heart 4s ease 1;
@@ -912,11 +886,11 @@ body{
 }
 .send-valentine-btn:before, .send-valentine-btn:after {
   content: "";
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   position: absolute;
   background: #eb3f84;
-  border-radius: 200px;
+  border-radius: 150px;
   transition: 1s ease all;
 }
 .send-valentine-btn:before {
@@ -945,7 +919,7 @@ body{
 @-webkit-keyframes heart {
   0% {
     transform: rotate(0deg);
-    border-radius: 200px;
+    border-radius: 150px;
     background: #fff;
   }
   50% {
@@ -962,7 +936,7 @@ body{
 @keyframes heart {
   0% {
     transform: rotate(0deg);
-    border-radius: 200px;
+    border-radius: 150px;
     background: #fff;
   }
   50% {
@@ -986,6 +960,7 @@ body{
   100% {
     top: -100px;
     background: #eb3f84;
+    border-bottom-right-radius: 0;
   }
 }
 @keyframes left {
@@ -999,6 +974,7 @@ body{
   100% {
     top: -100px;
     background: #eb3f84;
+    border-bottom-right-radius: 0;
   }
 }
 @-webkit-keyframes right {
@@ -1012,6 +988,7 @@ body{
   100% {
     left: -100px;
     background: #eb3f84;
+    border-bottom-right-radius: 0;
   }
 }
 @keyframes right {
@@ -1025,6 +1002,7 @@ body{
   100% {
     left: -100px;
     background: #eb3f84;
+    border-bottom-right-radius: 0;
   }
 }
 @-webkit-keyframes pulse {
@@ -1045,49 +1023,12 @@ body{
 }
 @media (prefers-color-scheme: dark) {
 
-  .dark\:border-gray-700 {
-    --tw-border-opacity: 1;
-    border-color: rgb(55 65 81 / var(--tw-border-opacity));
-  }
-
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }
-
-  .dark\:bg-gray-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-  }
-
-  .dark\:text-gray-500 {
-    --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-gray-400 {
-    --tw-text-opacity: 1;
-    color: rgb(156 163 175 / var(--tw-text-opacity));
-  }
 }
 @media (min-width: 640px) {
-
-  .sm\:ml-0 {
-    margin-left: 0px;
-  }
-
-  .sm\:block {
-    display: block;
-  }
-
-  .sm\:h-20 {
-    height: 5rem;
-  }
 
   .sm\:items-center {
     align-items: center;
@@ -1097,14 +1038,6 @@ body{
     justify-content: flex-start;
   }
 
-  .sm\:justify-between {
-    justify-content: space-between;
-  }
-
-  .sm\:rounded-lg {
-    border-radius: 0.5rem;
-  }
-
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1112,28 +1045,6 @@ body{
 
   .sm\:pt-0 {
     padding-top: 0px;
-  }
-
-  .sm\:text-left {
-    text-align: left;
-  }
-
-  .sm\:text-right {
-    text-align: right;
-  }
-}
-@media (min-width: 768px) {
-
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:border-t-0 {
-    border-top-width: 0px;
-  }
-
-  .md\:border-l {
-    border-left-width: 1px;
   }
 }
 @media (min-width: 1024px) {
