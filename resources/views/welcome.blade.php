@@ -54,6 +54,7 @@
                 </g>
             </defs>
         </svg>
+        <footer class="absolute bottom-0 w-full text-center">Created & designed for humans by Kamil Langer & Dominik Betlej</footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
