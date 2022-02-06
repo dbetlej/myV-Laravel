@@ -7,7 +7,7 @@
         <link href="/css/app.css" rel="stylesheet">
     </head>
     <body>
-        <div class="container"> 
+        <div class="valentine-container"> 
             <form class="heart-form text-center" action="/valentine" method="POST">
                 @csrf
                 <div class="form-group">

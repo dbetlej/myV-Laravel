@@ -83,7 +83,7 @@ body{
     }
 }
 
-.container{
+.valentine-container{
     z-index: 1000;
     position: absolute;
     top: 0;
@@ -92,7 +92,7 @@ body{
     height: 100%;
 }
 
-.form-group {
+.form-group, .valentine-text {
   margin-top: 140px;
 }
 
@@ -108,4 +108,69 @@ body{
 .v-input::placeholder{
   color: #5c001a;
   text-align: center;
+}
+
+.card-container{
+  transform: translate(-50%, -50%);
+}
+.card {
+  width: 0;
+  height: 0;
+  border-top: 200px solid #eee;
+  border-right: 275px solid #ddd;
+  border-bottom: 200px solid #ccc;
+  border-left: 270px solid #ccc;
+}
+
+.heart {
+  width: 74px;
+  height: 74px;
+  background: #ff3838;
+  transform: translate(-50%, -50%) rotate(45deg);
+  animation: heartbeat 1.4s linear infinite;
+  cursor: pointer;
+}
+
+.heart:before {
+  content: "";
+  background: #ff3838;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.heart:after {
+  content: "";
+  background: #ff3838;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+  30% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.4);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+  }
+  70% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.4);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
 }

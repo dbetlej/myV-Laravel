@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/css/404.css" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
         <title>404 - myV</title>
     </head>
     <body>
@@ -32,6 +32,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="/js/404.js"></script>
+        <script src="/js/app.js"></script>
     </body>
 </html>
