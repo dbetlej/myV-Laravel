@@ -81,3 +81,18 @@ $('#copy-url').click(function(e){
   url.setSelectionRange(0, 99999); /* For mobile devices */
   navigator.clipboard.writeText(url.value);
 });
+
+$('#share-url').click(function(e){
+  e.preventDefault();
+  if (navigator.share) {
+    navigator.share({
+      title: 'Valentine',
+      url: $('#url').val()
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+    .catch(console.error);
+  } else {
+    // fallback
+  }
+});

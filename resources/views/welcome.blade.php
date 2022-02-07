@@ -23,7 +23,12 @@
                     </div>
                     <textarea class="valentine-content v-input w-3/4 mt-4" placeholder="{{__('valentine.valentine_content')}}" name="content" id="content"></textarea>
                     @if( !empty($v['valentine_token']) )
-                        <span id="valentine-link"> <a href="/valentine/{{ $v['valentine_token'] }}">Valentine link</a><input type="text" style="display: none;" id="url" value="/valentine/{{ $v['valentine_token'] }}"><button id="copy-url">Kopiuj link</button></span>
+                        <span id="valentine-link">
+                            <a href="/valentine/{{ $v['valentine_token'] }}">Valentine link</a>
+                            <input type="text" style="display: none;" id="url" value="/valentine/{{ $v['valentine_token'] }}">
+                            <button id="copy-url">Kopiuj link</button>
+                            <button id="share-url">Udostępnij</button>
+                        </span>
                     @endif
                     <div class="w-full text-center flex flex-col">
                         <span>Nie masz pomysłu na życzenia?</span>
