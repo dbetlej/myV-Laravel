@@ -580,13 +580,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-6 {
   padding: 1.5rem;
 }
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .px-6 {
   padding-left: 1.5rem;
@@ -752,7 +752,7 @@ body > .text > a{
 }
 
 .form-group, .valentine-text {
-  margin-top: 140px;
+  margin-top: 90px;
 }
 
 .v-input {
