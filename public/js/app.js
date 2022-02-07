@@ -2137,6 +2137,16 @@ $('.random-whishes').click(function (e) {
     $('#content').val(res.content);
   });
 });
+$('#copy-url').click(function (e) {
+  e.preventDefault();
+  var url = document.getElementById('url');
+  url.select();
+  url.focus();
+  url.setSelectionRange(0, 99999);
+  /* For mobile devices */
+
+  navigator.clipboard.writeText(url.value);
+});
 
 /***/ }),
 
