@@ -45,8 +45,14 @@ class ValentineController extends Controller
         if(empty($v->created_at)){
             return redirect('/404');
         }
-        
-        $v->lover = $_SERVER['REMOTE_ADDR'];
+
+        if(!empty($_SERVER['HTTP_FORWARDED_FOR'])){
+            $v->lover = $_SERVER['HTTP_FORWARDED_FOR'];
+        }else if(!empty($_SERVER['REMOTE_ADDR'])){
+            $v->lover = $_SERVER['REMOTE_ADDR'];
+        }else{
+            // $v->lover = '192.168.0.1'; //For tests only
+        }
         $v->created_at = date('Y-m-d H:i:s');
         $v->save();
 
