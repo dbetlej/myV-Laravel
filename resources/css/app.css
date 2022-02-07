@@ -57,26 +57,42 @@ body > .text > a{
 }
 
 .back_button{
-    text-align:center; 
-    top:60%;
-    font-size:18px;
-    background:#ffb6c3;
-    border:0;
+  text-align:center; 
+  top:60%;
+  font-size:18px;
+  background:#ffb6c3;
+  border:0;
 }
 .heart-form{
-    position: absolute;
-    background: url("/img/Heart.svg");
-    width: 600px;
-    height: 500px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center; 
-    left: 50%;
-    top:50%;
-    transform: translate(-50%, -50%);
-    /* animation: pulse 2s linear infinite; */
+  position: absolute;
+  /* background: url("/img/Heart.svg"); */
+  width: 600px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center; 
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
 }
-
+.form-group{
+  transform: translate(-50%, -50%);
+}
+.form-group, .svg-bg{
+  width: 600px;
+  height: 500px;
+}
+.heart-bg{
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  fill: #ffb3c3;
+  stroke: #83001c;
+  animation: pulsing 3s ease-in-out infinite;
+  box-sizing: border-box;
+  stroke-opacity: 0;
+  stroke-width: 24px;
+}
 @media(max-width:450px){
     .text {
         font-size: 1.10em;
@@ -363,13 +379,26 @@ body > .text > a{
 }
 @keyframes pulse {
   0%{
-      box-shadow: 0 0 0 0 #d5003c;
+      text-shadow: 0 0 0 0 #d5003c;
   }
   100%{
-      box-shadow: 0 0 5px 20px #d5003c73;
+      text-shadow: 0 0 5px 20px #d5003c73;
   }
 }
-
+@keyframes pulsing {
+  0% {
+    stroke-width: 0;
+    stroke-opacity: 0;
+  }
+  75% {
+    stroke-width: 24px;
+    stroke-opacity: 1;
+  }
+  100% {
+    stroke-width: 0;
+    stroke-opacity: 0;
+  }
+}
 footer{
   background: #FFB3C3;
   color: #293d71;
