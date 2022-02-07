@@ -18,11 +18,7 @@
                 <div class="valentine-text px-4">
                     Dostałeś walentynkę od {{$valentine->cupid_name}}
                     <br>
-                    Miłość to znaczy, że jesteś przy mnie.
-                    Miłość to znaczy, że o mnie myślisz.
-                    Miłość sprawia, że mi się przyśnisz.
-                    Miłość - cóż więc może być piękniejszego,
-                    niż nas dwoje w dzień świętego Walentego?
+                    {{$valentine->content}}
                 </div>
             </div>
         </div>

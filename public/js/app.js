@@ -2060,9 +2060,13 @@ module.exports = {
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Text Animation
-// SVG HEART ANIMATION USING d3 and GSAP
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+}); // SVG HEART ANIMATION USING d3 and GSAP
 
 var paper = d3.select("#canvas");
 var wsvg = $("#canvas").width();
@@ -2122,6 +2126,16 @@ $('.heart').click(function () {
 $('.send-valentine-btn').click(function () {
   $(this).addClass('animation');
   $('#valentine-form').delay(4000).submit();
+});
+$('.random-whishes').click(function (e) {
+  e.preventDefault();
+  $.ajax({
+    method: 'get',
+    url: '/get_whishes',
+    dataType: 'json'
+  }).always(function (res) {
+    $('#content').val(res.content);
+  });
 });
 
 /***/ }),

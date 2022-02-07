@@ -5,5 +5,5 @@ return [
     'sended_valentine' => 'Wysłano walentynke',
     'valentine_content' => 'Życzenia walentynkowe',
     'valentine_cupid_name' => 'Twoja nazwa',
-    'lover_email' => 'Email walentynki'
+    'lover_email' => 'Email walentynki',
 ];

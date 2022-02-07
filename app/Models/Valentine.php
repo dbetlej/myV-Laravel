@@ -9,11 +9,14 @@ class Valentine extends Model
 {
     use HasFactory;
 
-    protected $table = 'mail_logs';
+    protected $table = 'valentines';
+
     protected $attributes = [
-        'email' => false,
         'cupid_name' => false,
+        'content' => false,
+        'email' => false,
         'cupid' => false,
+        'content' => false,
         'valentine_token' => false,
         'lover' => null,
         'created_at' => null,

@@ -1,7 +1,10 @@
 require('./bootstrap');
 
-// Text Animation
-
+$.ajaxSetup({
+  headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
 
 // SVG HEART ANIMATION USING d3 and GSAP
 var paper = d3.select("#canvas");
@@ -57,4 +60,15 @@ $('.heart').click(function(){
 $('.send-valentine-btn').click(function(){
     $(this).addClass('animation');
     $('#valentine-form').delay( 4000 ).submit();
+});
+
+$('.random-whishes').click(function(e){
+  e.preventDefault();
+  $.ajax({
+    method: 'get',
+    url: '/get_whishes',
+    dataType: 'json',
+  }).always(function(res){
+    $('#content').val(res.content);
+  });
 });

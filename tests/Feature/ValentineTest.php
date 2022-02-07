@@ -22,12 +22,20 @@ class ValentineTest extends TestCase
         $response->assertStatus(200);
 
         $response = $this->post('/valentine', [
-            'cupid_name' => ''
+            'cupid_name' => '',
+            'content'    => ''
         ]);
         $response->assertSessionHasErrors(['cupid_name']);
 
         $response = $this->post('/valentine', [
-            'cupid_name' => "ValentineTest"
+            'cupid_name' => 'test',
+            'content'    => ''
+        ]);
+        $response->assertSessionHasErrors(['content']);
+
+        $response = $this->post('/valentine', [
+            'cupid_name' => "ValentineTest",
+            'content' => "ValentineContentTest"
         ]);
         $v = Valentine::CupidName('ValentineTest')->first();
         $response->assertSee($v->valentine_token);

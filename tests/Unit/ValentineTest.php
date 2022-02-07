@@ -34,7 +34,7 @@ class ValentineTest extends TestCase
         $v->lover = "192.120.24.120";
         $v->updated_at = date('Y-m-d H:i:s');
         $v->save();
-        $this->assertDatabaseHas('mail_logs', [
+        $this->assertDatabaseHas('valentines', [
             'lover' => "192.120.24.120",
         ]);
     }
@@ -48,7 +48,7 @@ class ValentineTest extends TestCase
     {
         $v = Valentine::factory()->create();
         $v->delete();
-        $this->assertDatabaseMissing('mail_logs', [
+        $this->assertDatabaseMissing('valentines', [
             'cupid_name' => $v->cupid_name
         ]);
     }

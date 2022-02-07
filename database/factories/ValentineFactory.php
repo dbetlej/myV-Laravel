@@ -18,8 +18,9 @@ class ValentineFactory extends Factory
     public function definition()
     {
         return [
-            'email' => $this->faker->safeEmail(),
             'cupid_name' => $this->faker->name(),
+            'content' => $this->faker->words(30, true),
+            'email' => $this->faker->safeEmail(),
             'cupid' => $this->faker->ipv4(),
             'valentine_token' => Str::random(10),
             'lover' => null,
