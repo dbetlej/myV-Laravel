@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MY Valentine</title>
         <link href="/css/app.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="/favicon.png"/>
     </head>
     <body>
         <div class="valentine-container"> 

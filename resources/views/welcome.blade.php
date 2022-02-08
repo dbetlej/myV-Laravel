@@ -6,6 +6,7 @@
         <title>Make Your Valentine</title>
         <link href="/css/app.css" rel="stylesheet">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="icon" type="image/png" href="/favicon.png"/>
     </head>
     <body>
         <div class="valentine-container"> 
