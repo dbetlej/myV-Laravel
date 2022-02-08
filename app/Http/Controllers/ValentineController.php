@@ -12,10 +12,10 @@ class ValentineController extends Controller
 {
     public function makeValentine(Request $request){
         if(empty($request->cupid_name)){
-            return back()->withErrors(['cupid_name' => __('errors.cupid_name')]);
+            return redirect('/')->with(['errors', ['cupid_name' => __('errors.cupid_name']]);
         }
         if(empty($request->content)){
-            return back()->withErrors(['content' => __('errors.content')]);
+            return redirect('/')->with(['errors', ['content' => __('errors.content']]);
         }
 
         $data['email'] = null;
@@ -30,7 +30,7 @@ class ValentineController extends Controller
         Valentine::factory()->create($data);
 
         if(!empty($request->email)){
-            // TODO: add mail
+            Mail::to($request->email)->send(new App\Mail\Valentine($data['valentine_token']);
         }
         
         return view('welcome', ['v' => $data]);
