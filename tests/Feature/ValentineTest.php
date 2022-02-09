@@ -25,13 +25,13 @@ class ValentineTest extends TestCase
             'cupid_name' => '',
             'content'    => ''
         ]);
-        $response->assertSessionHas('errors');
+        $response->assertSessionHas('error');
 
         $response = $this->post('/valentine', [
             'cupid_name' => 'test',
             'content'    => ''
         ]);
-        $response->assertSessionHas('errors');
+        $response->assertSessionHas('error');
 
         $response = $this->post('/valentine', [
             'cupid_name' => "ValentineTest",
