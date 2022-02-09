@@ -6,4 +6,5 @@ return [
     'valentine_content' => 'Valentine wishes',
     'valentine_cupid_name' => 'Your name',
     'lover_email' => 'Valentine email',
+    'valentine_email_subject' => 'Valentine from ',
 ];

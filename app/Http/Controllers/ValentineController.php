@@ -30,7 +30,7 @@ class ValentineController extends Controller
         Valentine::factory()->create($data);
 
         if(!empty($request->email)){
-            Mail::to($request->email)->send(new \App\Mail\Valentine($data['valentine_token']));
+            Mail::to($request->email)->subject(__('valentine.valentine_email_subject').$request->cupid_name)->send(new \App\Mail\Valentine($data['valentine_token']));
         }
         
         return view('welcome', ['v' => $data]);
