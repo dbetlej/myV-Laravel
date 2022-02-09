@@ -39,6 +39,10 @@ class ValentineTest extends TestCase
         ]);
         $v = Valentine::CupidName('ValentineTest')->first();
         $response->assertSee($v->valentine_token);
+
+        $mailable = new \App\Mail\Valentine($v->valentine_token);
+        
+        $mailable->assertSeeInHtml($v->valentine_token);
     }
 
     /**

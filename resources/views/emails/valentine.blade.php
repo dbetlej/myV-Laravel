@@ -5,6 +5,6 @@
         <title>Make Your Valentine</title>
     </head>
     <body>
-        Walentynka
+        <a href="http://localhost/valentine/{{$token}}">Walentynka</a>
     </body>
 </html>

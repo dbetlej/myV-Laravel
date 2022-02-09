@@ -11,6 +11,7 @@ class Valentine extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $token;
     /**
      * Create a new message instance.
      *
