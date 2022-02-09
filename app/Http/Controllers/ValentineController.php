@@ -12,10 +12,10 @@ class ValentineController extends Controller
 {
     public function makeValentine(Request $request){
         if(empty($request->cupid_name)){
-            return redirect('/')->with('errors', ['cupid_name' => __('errors.cupid_name')]);
+            return redirect('/')->with('error', __('errors.cupid_name'));
         }
         if(empty($request->content)){
-            return redirect('/')->with('errors', ['content' => __('errors.content')]);
+            return redirect('/')->with('error', __('errors.content'));
         }
 
         $data['email'] = null;
