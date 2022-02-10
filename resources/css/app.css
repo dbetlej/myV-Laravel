@@ -80,7 +80,11 @@ body > .text > a{
 }
 .form-group, .svg-bg{
   width: 600px;
-  height: 500px;
+  height: 520px;
+}
+.heart-bg > g > .heart-border{
+  animation: pulsing 3s ease-in-out infinite;
+  fill: #500;
 }
 .heart-bg{
   width: 100%;
@@ -88,7 +92,6 @@ body > .text > a{
   transform: translate(-50%, -50%);
   fill: #ffb3c3;
   stroke: #83001c;
-  animation: pulsing 3s ease-in-out infinite;
   box-sizing: border-box;
   stroke-opacity: 0;
   stroke-width: 24px;
@@ -198,16 +201,6 @@ body > .text > a{
     transform: translate(-50%, -50%) rotate(45deg) scale(1);
   }
 }
-
-/* .send-valentine-btn {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  background: #eb3f84;
-  margin: 200px auto;
-  transform: rotate(0deg);
-  border-radius: 150px;
-} */
 .send-valentine-btn {
   position: absolute;
   width: 150px;
@@ -252,6 +245,7 @@ body > .text > a{
   background: #eb3f84;
   border-radius: 150px;
   transition: 1s ease all;
+  color: #fff;
 }
 .send-valentine-btn:before {
   left: 0;
@@ -266,7 +260,7 @@ body > .text > a{
 .send-valentine-btn:after {
   left: 0;
   top: 0;
-  background: #eb3f84;
+  background: #500;
 }
 .animation.send-valentine-btn:after {
   -webkit-animation: right 4s ease 1;
@@ -276,8 +270,9 @@ body > .text > a{
 .logo {
   top: 10%;
 }
-.icon-btn{
+.icon-btn > svg{
   width: 40px;
+  height: auto;
 }
 .random-whishes {
   fill: #d5003c;
@@ -299,7 +294,7 @@ body > .text > a{
   0% {
     transform: rotate(0deg);
     border-radius: 150px;
-    background: #fff;
+    background: #500;
     bottom: -10%;
     left: 39%;
   }
@@ -322,7 +317,7 @@ body > .text > a{
   0% {
     transform: rotate(0deg);
     border-radius: 150px;
-    background: #fff;
+    background: #500;
     bottom: -10%;
     left: 39%;
   }
@@ -343,7 +338,7 @@ body > .text > a{
 @-webkit-keyframes left {
   0% {
     top: 0;
-    background: #fff;
+    background: #500;
   }
   50% {
     top: -100px;
@@ -357,7 +352,7 @@ body > .text > a{
 @keyframes left {
   0% {
     top: 0;
-    background: #fff;
+    background: #500;
   }
   50% {
     top: -100px;
@@ -371,7 +366,7 @@ body > .text > a{
 @-webkit-keyframes right {
   0% {
     left: 0;
-    background: #fff;
+    background: #500;
   }
   50% {
     left: -100px;
@@ -385,7 +380,7 @@ body > .text > a{
 @keyframes right {
   0% {
     left: 0;
-    background: #fff;
+    background: #500;
   }
   50% {
     left: -100px;
