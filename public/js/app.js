@@ -2157,8 +2157,18 @@ $('#share-url').click(function (e) {
     }).then(function () {
       console.log('Thanks for sharing!');
     })["catch"](console.error);
-  } else {// fallback
+  } else {
+    $('#share-modal').fadeIn();
+    $('#shadow').fadeIn();
   }
+});
+$('#shadow').click(function () {
+  $('.modal').fadeOut();
+  $(this).fadeOut();
+});
+$('.close').click(function () {
+  $('.modal').fadeOut();
+  $('#shadow').fadeOut();
 });
 
 /***/ }),

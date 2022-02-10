@@ -93,6 +93,15 @@ $('#share-url').click(function(e){
     })
     .catch(console.error);
   } else {
-    // fallback
+    $('#share-modal').fadeIn();
+    $('#shadow').fadeIn();
   }
+});
+$('#shadow').click(function(){
+  $('.modal').fadeOut();
+  $(this).fadeOut();
+});
+$('.close').click(function(){
+  $('.modal').fadeOut();
+  $('#shadow').fadeOut();
 });

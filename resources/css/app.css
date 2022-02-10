@@ -276,6 +276,25 @@ body > .text > a{
 .logo {
   top: 10%;
 }
+.icon-btn{
+  width: 40px;
+}
+.random-whishes {
+  fill: #d5003c;
+}
+#share-url, #copy-url{
+  fill: #5c001a;
+}
+
+#shadow{
+  background: rgba(0, 0, 0, 0.158);
+}
+.modal{
+  transform: translate(-50%, -50%);
+}
+#share-modal{
+
+}
 @-webkit-keyframes heart {
   0% {
     transform: rotate(0deg);
