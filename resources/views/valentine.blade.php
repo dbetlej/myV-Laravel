@@ -15,11 +15,11 @@
                 </div>
             </div>
 
-            <div class="heart-form text-center" style="display:none;">
+            <div class="heart-form heart-valentine text-center" style="display:none;">
                 <div class="valentine-text px-4">
-                    Dostałeś walentynkę od {{$valentine->cupid_name}}
+                    <span class="name-box">Dostałeś/aś walentynkę od {{$valentine->cupid_name}}</span>
                     <br>
-                    {{$valentine->content}}
+                    <div class="mt-2 mx-6">{{$valentine->content}}</div>
                 </div>
             </div>
         </div>
