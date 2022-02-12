@@ -425,9 +425,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.fixed {
-  position: fixed;
-}
 .absolute {
   position: absolute;
 }
@@ -449,9 +446,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .left-0 {
   left: 0px;
 }
-.right-0 {
-  right: 0px;
-}
 .z-0 {
   z-index: 0;
 }
@@ -464,63 +458,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-30 {
   z-index: 30;
 }
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
 .mb-4 {
   margin-bottom: 1rem;
 }
 .mt-4 {
   margin-top: 1rem;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .mt-2 {
   margin-top: 0.5rem;
-}
-.ml-1 {
-  margin-left: 0.25rem;
-}
-.mr-2 {
-  margin-right: 0.5rem;
-}
-.ml-2 {
-  margin-left: 0.5rem;
-}
-.ml-4 {
-  margin-left: 1rem;
-}
-.mt-8 {
-  margin-top: 2rem;
-}
-.ml-12 {
-  margin-left: 3rem;
-}
-.-mt-px {
-  margin-top: -1px;
 }
 .flex {
   display: flex;
 }
-.grid {
-  display: grid;
-}
-.hidden {
-  display: none;
-}
 .h-screen {
   height: 100vh;
-}
-.h-5 {
-  height: 1.25rem;
-}
-.h-8 {
-  height: 2rem;
-}
-.h-16 {
-  height: 4rem;
-}
-.min-h-screen {
-  min-height: 100vh;
 }
 .w-full {
   width: 100%;
@@ -531,32 +485,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-3\/4 {
   width: 75%;
 }
+.w-2\/3 {
+  width: 66.666667%;
+}
+.w-1\/2 {
+  width: 50%;
+}
 .w-screen {
   width: 100vw;
-}
-.w-5 {
-  width: 1.25rem;
-}
-.w-8 {
-  width: 2rem;
-}
-.w-auto {
-  width: auto;
-}
-.max-w-xl {
-  max-width: 36rem;
-}
-.max-w-6xl {
-  max-width: 72rem;
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .resize {
   resize: both;
-}
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 .flex-row {
   flex-direction: row;
@@ -567,116 +509,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .items-center {
   align-items: center;
 }
-.justify-center {
-  justify-content: center;
-}
-.justify-between {
-  justify-content: space-between;
-}
 .justify-around {
   justify-content: space-around;
-}
-.overflow-hidden {
-  overflow: hidden;
-}
-.border-t {
-  border-top-width: 1px;
-}
-.border-r {
-  border-right-width: 1px;
-}
-.border-gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
-}
-.border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
-}
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-.p-6 {
-  padding: 1.5rem;
 }
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-.pt-8 {
-  padding-top: 2rem;
-}
 .text-center {
   text-align: center;
-}
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-.font-semibold {
-  font-weight: 600;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.leading-7 {
-  line-height: 1.75rem;
-}
-.tracking-wider {
-  letter-spacing: 0.05em;
-}
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-.antialiased {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -801,9 +642,10 @@ body > .text > a{
 
 .v-input {
   background: transparent;
-  border: 2px solid #d5003c;
-  border-radius: 8px;
+  border-bottom: 1px solid #790022;
+  border-radius: 5px;
   padding: 0 8px 0 8px;
+  margin: 0 5px;
   text-align: center;
   color: #510101;
 }
@@ -813,19 +655,37 @@ body > .text > a{
           animation: pulse 2s ease-in-out infinite;
 }
 .v-input::-moz-placeholder{
-  color: #5c001a;
+  color: #5b1818;
   text-align: center;
+  font-weight: 600;
 }
 .v-input:-ms-input-placeholder{
-  color: #5c001a;
+  color: #5b1818;
   text-align: center;
+  font-weight: 600;
 }
 .v-input::placeholder{
-  color: #5c001a;
+  color: #5b1818;
   text-align: center;
+  font-weight: 600;
 }
 .valentine-content{
-  height: 130px;
+  height: 120px;
+  background: rgba(106, 0, 13, 0.75) none repeat scroll 0% 0%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  color:#510101 !important;
+}
+.valentine-info{
+  background: #f5f5f52e;
+  padding: 2px 10px;
+  border-radius: 8px;
+  color: #2e2e2e;
+}
+.span-icon{
+  padding: 0 8px;
 }
 .card-container{
   transform: translate(-50%, -50%);
@@ -929,6 +789,8 @@ body > .text > a{
   rotate: 0deg;
   z-index: 10;
   transition: all 1s ease-in-out;
+  color: rgb(222, 39, 112);
+  font-weight: 700;
 }
 .send-valentine-after{
   transform: none;
@@ -986,7 +848,7 @@ body > .text > a{
   top: 10%;
 }
 .icon-btn > svg{
-  width: 40px;
+  width: 24px;
   height: auto;
 }
 .random-whishes {
@@ -1153,37 +1015,4 @@ body > .text > a{
 footer{
   background: #FFB3C3;
   color: #293d71;
-}
-@media (prefers-color-scheme: dark) {
-
-  .dark\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  }
-}
-@media (min-width: 640px) {
-
-  .sm\:items-center {
-    align-items: center;
-  }
-
-  .sm\:justify-start {
-    justify-content: flex-start;
-  }
-
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .sm\:pt-0 {
-    padding-top: 0px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 }

@@ -47,24 +47,24 @@
                         </div>
                     @endif
 
-                    <div class="form-input flex flex-row justify-around w-full mb-4">
-                        <input placeholder="{{__('valentine.lover_email')}}" name="email" type="email" class="w-1/3 v-input">
-                        <input placeholder="{{__('valentine.valentine_cupid_name')}}" name="cupid_name" type="text" class="w-1/3 v-input" >
+                    <div class="form-input flex flex-row justify-around w-2/3 mb-2">
+                        <input placeholder="{{__('valentine.lover_email')}}" name="email" type="email" class="w-1/2 v-input">
+                        <input placeholder="{{__('valentine.valentine_cupid_name')}}" name="cupid_name" type="text" class="w-1/2 v-input" >
                     </div>
-                    <textarea class="valentine-content v-input w-3/4 mt-4" placeholder="{{__('valentine.valentine_content')}}" name="content" id="content"></textarea>
+                    <textarea class="valentine-content w-3/4 mt-4" placeholder="{{__('valentine.valentine_content')}}" name="content" id="content"></textarea>
                     @if( !empty($v['valentine_token']) )
                         <div id="valentine-link" class="w-full flex flex-col items-center">
                             <!-- <a href="/valentine/{{ $v['valentine_token'] }}">Valentine link</a> -->
                             <input type="text" style="display: none;" id="url" value="/valentine/{{ $v['valentine_token'] }}">
-                            <button id="copy-url" class="icon-btn mt-2 flex flex-col items-center" title="{{__('valentine.copy_btn')}}">
-                                <span>{{__('valentine.copy_btn')}}</span>
+                            <button id="copy-url" class="icon-btn mt-2 flex flex-row items-center" title="{{__('valentine.copy_btn')}}">
+                                <span class="span-icon">{{__('valentine.copy_btn')}}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                     <path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/>
                                 </svg>
                             </button>
-                            <button id="share-url" class="icon-btn mt-2 flex flex-col items-center" title="{{__('valentine.share_btn')}}">
-                                <span>{{__('valentine.share_btn')}}</span>
+                            <button id="share-url" class="icon-btn mt-2 flex flex-row items-center" title="{{__('valentine.share_btn')}}">
+                                <span class="span-icon">{{__('valentine.share_btn')}}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                                     <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                     <path d="M568.9 143.5l-150.9-138.2C404.8-6.773 384 3.039 384 21.84V96C241.2 97.63 128 126.1 128 260.6c0 54.3 35.2 108.1 74.08 136.2c12.14 8.781 29.42-2.238 24.94-16.46C186.7 252.2 256 224 384 223.1v74.2c0 18.82 20.84 28.59 34.02 16.51l150.9-138.2C578.4 167.8 578.4 152.2 568.9 143.5zM416 384c-17.67 0-32 14.33-32 32v31.1l-320-.0013V128h32c17.67 0 32-14.32 32-32S113.7 64 96 64H64C28.65 64 0 92.65 0 128v319.1c0 35.34 28.65 64 64 64l320-.0013c35.35 0 64-28.66 64-64V416C448 398.3 433.7 384 416 384z"/>
@@ -72,9 +72,9 @@
                             </button>
                         </div>
                     @else
-                        <div class="w-full text-center flex flex-col items-center">
-                            <span>Nie masz pomysłu na życzenia?</span>
-                            <button class="random-whishes icon-btn" title="{{__('valentine.random_wishes')}}">
+                        <div class="w-full text-center flex flex-col items-center mt-4">
+                            <span class="valentine-info">Brak pomysłu na życzenie?</span>
+                            <button class="random-whishes icon-btn mt-2" title="{{__('valentine.random_wishes')}}">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                                     <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                     <path d="M447.1 224c0-12.56-4.781-25.13-14.35-34.76l-174.9-174.9C249.1 4.786 236.5 0 223.1 0C211.4 0 198.9 4.786 189.2 14.35L14.35 189.2C4.783 198.9-.0011 211.4-.0011 223.1c0 12.56 4.785 25.17 14.35 34.8l174.9 174.9c9.625 9.562 22.19 14.35 34.75 14.35s25.13-4.783 34.75-14.35l174.9-174.9C443.2 249.1 447.1 236.6 447.1 224zM96 248c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1S120 210.8 120 224S109.3 248 96 248zM224 376c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1s23.1 10.75 23.1 23.1S237.3 376 224 376zM224 248c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1S248 210.8 248 224S237.3 248 224 248zM224 120c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1s23.1 10.75 23.1 23.1S237.3 120 224 120zM352 248c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1s23.1 10.75 23.1 23.1S365.3 248 352 248zM591.1 192l-118.7 0c4.418 10.27 6.604 21.25 6.604 32.23c0 20.7-7.865 41.38-23.63 57.14l-136.2 136.2v46.37C320 490.5 341.5 512 368 512h223.1c26.5 0 47.1-21.5 47.1-47.1V240C639.1 213.5 618.5 192 591.1 192zM479.1 376c-13.25 0-23.1-10.75-23.1-23.1s10.75-23.1 23.1-23.1s23.1 10.75 23.1 23.1S493.2 376 479.1 376z"/>
