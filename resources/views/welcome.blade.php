@@ -8,7 +8,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="icon" type="image/png" href="/favicon.png"/>
     </head>
-    <body>
+    <body style="background: #ff5c8a;">
         <div class="valentine-container"> 
             <span class="text logo"><a href="/">MY Valentine</a></span>
             <form class="heart-form text-center" id="valentine-form" action="/valentine" method="POST">
@@ -40,7 +40,7 @@
                     </svg> -->
                 </div>
                 @csrf
-                <div class="form-group flex flex-col items-center absolute top-1/2 left-1/2 z-10">
+                <div class="form-group flex flex-col items-center absolute top-1/2 left-1/2 z-10 form-mobile">
                     @if (session('error'))
                         <div class="alert alert-success">
                             {{ session('error') }}
@@ -51,23 +51,23 @@
                         <input placeholder="{{__('valentine.lover_email')}}" name="email" type="email" class="w-1/2 v-input">
                         <input placeholder="{{__('valentine.valentine_cupid_name')}}" name="cupid_name" type="text" class="w-1/2 v-input" >
                     </div>
-                    <textarea class="valentine-content w-3/4 mt-4" placeholder="{{__('valentine.valentine_content')}}" name="content" id="content"></textarea>
+                    <textarea class="valentine-content w-3/4 mt-4 text-box" placeholder="{{__('valentine.valentine_content')}}" name="content" id="content"></textarea>
                     @if( !empty($v['valentine_token']) )
                         <div id="valentine-link" class="w-full flex flex-col items-center">
                             <!-- <a href="/valentine/{{ $v['valentine_token'] }}">Valentine link</a> -->
                             <input type="text" style="display: none;" id="url" value="/valentine/{{ $v['valentine_token'] }}">
-                            <button id="copy-url" class="icon-btn mt-2 flex flex-row items-center" title="{{__('valentine.copy_btn')}}">
-                                <span class="span-icon">{{__('valentine.copy_btn')}}</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                                    <path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/>
-                                </svg>
-                            </button>
-                            <button id="share-url" class="icon-btn mt-2 flex flex-row items-center" title="{{__('valentine.share_btn')}}">
+                            <button id="share-url" class="icon-btn mt-2 flex flex-row items-center options-button" title="{{__('valentine.share_btn')}}">
                                 <span class="span-icon">{{__('valentine.share_btn')}}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                                     <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                     <path d="M568.9 143.5l-150.9-138.2C404.8-6.773 384 3.039 384 21.84V96C241.2 97.63 128 126.1 128 260.6c0 54.3 35.2 108.1 74.08 136.2c12.14 8.781 29.42-2.238 24.94-16.46C186.7 252.2 256 224 384 223.1v74.2c0 18.82 20.84 28.59 34.02 16.51l150.9-138.2C578.4 167.8 578.4 152.2 568.9 143.5zM416 384c-17.67 0-32 14.33-32 32v31.1l-320-.0013V128h32c17.67 0 32-14.32 32-32S113.7 64 96 64H64C28.65 64 0 92.65 0 128v319.1c0 35.34 28.65 64 64 64l320-.0013c35.35 0 64-28.66 64-64V416C448 398.3 433.7 384 416 384z"/>
+                                </svg>
+                            </button>
+                            <button id="copy-url" class="icon-btn mt-2 flex flex-row items-center options-button" title="{{__('valentine.copy_btn')}}">
+                                <span class="span-icon">{{__('valentine.copy_btn')}}</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/>
                                 </svg>
                             </button>
                         </div>
@@ -121,7 +121,7 @@
                 </g>
             </defs>
         </svg>
-        <footer class="absolute bottom-0 w-full text-center">Created & designed for humans by Kamil Langer & Dominik Betlej</footer>
+        <footer class="absolute bottom-0 w-full text-center p-2">Created & designed for humans by Kamil Langer & Dominik Betlej</footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>

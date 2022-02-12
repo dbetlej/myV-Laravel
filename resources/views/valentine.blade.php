@@ -7,7 +7,7 @@
         <link href="/css/app.css" rel="stylesheet">
         <link rel="icon" type="image/png" href="/favicon.png"/>
     </head>
-    <body>
+    <body style="background: #ff5c8a;">
         <div class="valentine-container"> 
             <div class="card-container absolute top-1/2 left-1/2">
                 <div class="card relative">
@@ -19,7 +19,7 @@
                 <div class="valentine-text px-4">
                     <span class="name-box">Dostałeś/aś walentynkę od {{$valentine->cupid_name}}</span>
                     <br>
-                    <div class="mt-2 mx-6">{{$valentine->content}}</div>
+                    <div class="m-2.5">{{$valentine->content}}</div>
                 </div>
             </div>
         </div>

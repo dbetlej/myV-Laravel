@@ -114,6 +114,10 @@ body > .text > a{
     padding: 4px 12px;
     border-bottom: 1px solid black;
 }
+.form-mobile{
+  width: 80%;
+ }
+ 
 @media(max-width:450px){
     .text {
         font-size: 1.10em;
@@ -154,6 +158,9 @@ body > .text > a{
   text-align: center;
   font-weight: 600;
 }
+.text-box::placeholder{
+  color: #ffffff;
+}
 .valentine-content{
   height: 120px;
   background: rgba(106, 0, 13, 0.75) none repeat scroll 0% 0%;
@@ -188,7 +195,14 @@ body > .text > a{
   border-bottom: 200px solid #ccc;
   border-left: 270px solid #ccc;
 }
-
+@media(max-width: 450px){
+  .card {
+    border-top: 100px solid #eee;
+    border-right: 170px solid #ddd;
+    border-bottom: 100px solid #ccc;
+    border-left: 170px solid #ccc;
+  }
+}
 .heart {
   width: 74px;
   height: 74px;
@@ -250,6 +264,24 @@ body > .text > a{
   position: absolute;
   transform: translateX(-50%);
   border-radius: 50%;
+}
+.alert{
+    background: #ba0000;
+    border-radius: 4px;
+    color: #fff;
+    padding: 0 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    border: 2px solid white;
+}
+.options-button{
+    background: #8f1829;
+    padding: 4px 12px;
+    color: #fff !important;
+    fill: white;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 12px;
 }
 
 @keyframes heartbeat {
