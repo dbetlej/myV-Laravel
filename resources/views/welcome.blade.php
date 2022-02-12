@@ -9,7 +9,7 @@
         <link rel="icon" type="image/png" href="/favicon.png"/>
     </head>
     <body style="background: #ff5c8a;">
-        <div class="valentine-container"> 
+        <div class="valentine-container overflow-hidden"> 
             <span class="text logo"><a href="/">MY Valentine</a></span>
             <form class="heart-form text-center" id="valentine-form" action="/valentine" method="POST">
                 <div class="svg-bg relative">

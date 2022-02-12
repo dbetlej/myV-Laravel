@@ -8,7 +8,7 @@
         <link rel="icon" type="image/png" href="/favicon.png"/>
     </head>
     <body style="background: #ff5c8a;">
-        <div class="valentine-container"> 
+        <div class="valentine-container overflow-hidden"> 
             <div class="card-container absolute top-1/2 left-1/2">
                 <div class="card relative">
                     <div class="heart"></div>
